@@ -1,3 +1,15 @@
+---
+title: "ABC 441 E: A > B substring の復習"
+emoji: "💡"
+type: "tech"
+topics:
+  - "競技プログラミング"
+  - "atcoder"
+  - "アルゴリズム"
+published: true
+published_at: "2026-05-13 17:13"
+---
+
 # ABC 441 E: A > B substring
 
 [問題](https://atcoder.jp/contests/abc441/tasks/abc441_e)
