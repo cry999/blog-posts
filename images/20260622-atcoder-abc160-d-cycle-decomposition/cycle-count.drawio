@@ -1,0 +1,91 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="cycle-count" id="cycle-count-1">
+    <mxGraphModel dx="980" dy="640" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="980" pageHeight="360" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <mxCell id="title" value="サイクル内も (i, i+d) で数える。距離は最大 ⌊n/2⌋ まで（例: n = 6）" style="text;html=1;align=center;fontStyle=1;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="200" y="14" width="580" height="24" as="geometry" />
+        </mxCell>
+
+        <!-- ===================== 左パネル: d = 2 (< n/2) ===================== -->
+        <mxCell id="a1" value="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;" vertex="1" parent="1"><mxGeometry x="132" y="82" width="36" height="36" as="geometry" /></mxCell>
+        <mxCell id="a2" value="2" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;" vertex="1" parent="1"><mxGeometry x="193" y="117" width="36" height="36" as="geometry" /></mxCell>
+        <mxCell id="a3" value="3" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;" vertex="1" parent="1"><mxGeometry x="193" y="187" width="36" height="36" as="geometry" /></mxCell>
+        <mxCell id="a4" value="4" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;" vertex="1" parent="1"><mxGeometry x="132" y="222" width="36" height="36" as="geometry" /></mxCell>
+        <mxCell id="a5" value="5" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;" vertex="1" parent="1"><mxGeometry x="71" y="187" width="36" height="36" as="geometry" /></mxCell>
+        <mxCell id="a6" value="6" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;" vertex="1" parent="1"><mxGeometry x="71" y="117" width="36" height="36" as="geometry" /></mxCell>
+
+        <mxCell id="ae12" style="endArrow=none;html=1;strokeColor=#cccccc;" edge="1" parent="1" source="a1" target="a2"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="ae23" style="endArrow=none;html=1;strokeColor=#cccccc;" edge="1" parent="1" source="a2" target="a3"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="ae34" style="endArrow=none;html=1;strokeColor=#cccccc;" edge="1" parent="1" source="a3" target="a4"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="ae45" style="endArrow=none;html=1;strokeColor=#cccccc;" edge="1" parent="1" source="a4" target="a5"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="ae56" style="endArrow=none;html=1;strokeColor=#cccccc;" edge="1" parent="1" source="a5" target="a6"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="ae61" style="endArrow=none;html=1;strokeColor=#cccccc;" edge="1" parent="1" source="a6" target="a1"><mxGeometry relative="1" as="geometry" /></mxCell>
+
+        <mxCell id="ah13" style="endArrow=none;html=1;strokeColor=#82b366;strokeWidth=2;" edge="1" parent="1" source="a1" target="a3"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="ah24" style="endArrow=none;html=1;strokeColor=#82b366;strokeWidth=2;" edge="1" parent="1" source="a2" target="a4"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="ah35" style="endArrow=none;html=1;strokeColor=#82b366;strokeWidth=2;" edge="1" parent="1" source="a3" target="a5"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="ah46" style="endArrow=none;html=1;strokeColor=#82b366;strokeWidth=2;" edge="1" parent="1" source="a4" target="a6"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="ah51" style="endArrow=none;html=1;strokeColor=#82b366;strokeWidth=2;" edge="1" parent="1" source="a5" target="a1"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="ah62" style="endArrow=none;html=1;strokeColor=#82b366;strokeWidth=2;" edge="1" parent="1" source="a6" target="a2"><mxGeometry relative="1" as="geometry" /></mxCell>
+
+        <mxCell id="lblA" value="d = 2 (&lt; n/2)&#10;(i, i+2) を全頂点で → n = 6 個" style="text;html=1;align=center;fontSize=11;fontColor=#3a7d34;" vertex="1" parent="1">
+          <mxGeometry x="10" y="278" width="290" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- ===================== 中パネル: d = 3 (= n/2) ===================== -->
+        <mxCell id="b1" value="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;" vertex="1" parent="1"><mxGeometry x="462" y="82" width="36" height="36" as="geometry" /></mxCell>
+        <mxCell id="b2" value="2" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;" vertex="1" parent="1"><mxGeometry x="523" y="117" width="36" height="36" as="geometry" /></mxCell>
+        <mxCell id="b3" value="3" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;" vertex="1" parent="1"><mxGeometry x="523" y="187" width="36" height="36" as="geometry" /></mxCell>
+        <mxCell id="b4" value="4" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;" vertex="1" parent="1"><mxGeometry x="462" y="222" width="36" height="36" as="geometry" /></mxCell>
+        <mxCell id="b5" value="5" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;" vertex="1" parent="1"><mxGeometry x="401" y="187" width="36" height="36" as="geometry" /></mxCell>
+        <mxCell id="b6" value="6" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;" vertex="1" parent="1"><mxGeometry x="401" y="117" width="36" height="36" as="geometry" /></mxCell>
+
+        <mxCell id="be12" style="endArrow=none;html=1;strokeColor=#cccccc;" edge="1" parent="1" source="b1" target="b2"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="be23" style="endArrow=none;html=1;strokeColor=#cccccc;" edge="1" parent="1" source="b2" target="b3"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="be34" style="endArrow=none;html=1;strokeColor=#cccccc;" edge="1" parent="1" source="b3" target="b4"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="be45" style="endArrow=none;html=1;strokeColor=#cccccc;" edge="1" parent="1" source="b4" target="b5"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="be56" style="endArrow=none;html=1;strokeColor=#cccccc;" edge="1" parent="1" source="b5" target="b6"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="be61" style="endArrow=none;html=1;strokeColor=#cccccc;" edge="1" parent="1" source="b6" target="b1"><mxGeometry relative="1" as="geometry" /></mxCell>
+
+        <mxCell id="bh14" style="endArrow=none;html=1;strokeColor=#b85450;strokeWidth=2;" edge="1" parent="1" source="b1" target="b4"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="bh25" style="endArrow=none;html=1;strokeColor=#b85450;strokeWidth=2;" edge="1" parent="1" source="b2" target="b5"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="bh36" style="endArrow=none;html=1;strokeColor=#b85450;strokeWidth=2;" edge="1" parent="1" source="b3" target="b6"><mxGeometry relative="1" as="geometry" /></mxCell>
+
+        <mxCell id="lblB" value="d = 3 (= n/2)&#10;(i, i+3) は表裏が一致 → n/2 = 3 個" style="text;html=1;align=center;fontSize=11;fontColor=#a8473f;" vertex="1" parent="1">
+          <mxGeometry x="340" y="278" width="290" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- ===================== 右パネル: d = 4 (> n/2) ===================== -->
+        <mxCell id="c1" value="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=11;" vertex="1" parent="1"><mxGeometry x="792" y="82" width="36" height="36" as="geometry" /></mxCell>
+        <mxCell id="c2" value="2" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#999999;fontSize=11;" vertex="1" parent="1"><mxGeometry x="853" y="117" width="36" height="36" as="geometry" /></mxCell>
+        <mxCell id="c3" value="3" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#999999;fontSize=11;" vertex="1" parent="1"><mxGeometry x="853" y="187" width="36" height="36" as="geometry" /></mxCell>
+        <mxCell id="c4" value="4" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#999999;fontSize=11;" vertex="1" parent="1"><mxGeometry x="792" y="222" width="36" height="36" as="geometry" /></mxCell>
+        <mxCell id="c5" value="5" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=11;" vertex="1" parent="1"><mxGeometry x="731" y="187" width="36" height="36" as="geometry" /></mxCell>
+        <mxCell id="c6" value="6" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#999999;fontSize=11;" vertex="1" parent="1"><mxGeometry x="731" y="117" width="36" height="36" as="geometry" /></mxCell>
+
+        <!-- 長い方 1→2→3→4→5（d = 4 歩、緑） -->
+        <mxCell id="ce12" value="" style="endArrow=none;html=1;strokeColor=#82b366;strokeWidth=3;" edge="1" parent="1" source="c1" target="c2"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="ce23" style="endArrow=none;html=1;strokeColor=#82b366;strokeWidth=3;" edge="1" parent="1" source="c2" target="c3"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="ce34" style="endArrow=none;html=1;strokeColor=#82b366;strokeWidth=3;" edge="1" parent="1" source="c3" target="c4"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="ce45" style="endArrow=none;html=1;strokeColor=#82b366;strokeWidth=3;" edge="1" parent="1" source="c4" target="c5"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <!-- 短い方 5→6→1（n−d = 2 歩、オレンジ） -->
+        <mxCell id="ce56" style="endArrow=none;html=1;strokeColor=#d79b00;strokeWidth=3;" edge="1" parent="1" source="c5" target="c6"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="ce61" style="endArrow=none;html=1;strokeColor=#d79b00;strokeWidth=3;" edge="1" parent="1" source="c6" target="c1"><mxGeometry relative="1" as="geometry" /></mxCell>
+
+        <mxCell id="lblC_long" value="長い方 = d = 4 歩" style="text;html=1;align=center;fontSize=10;fontColor=#3a7d34;" vertex="1" parent="1">
+          <mxGeometry x="868" y="195" width="100" height="16" as="geometry" />
+        </mxCell>
+        <mxCell id="lblC_short" value="短い方 = n−d = 2 歩" style="text;html=1;align=center;fontSize=10;fontColor=#b67800;" vertex="1" parent="1">
+          <mxGeometry x="648" y="120" width="110" height="16" as="geometry" />
+        </mxCell>
+
+        <mxCell id="lblC" value="d = 4 (&gt; n/2)：同じペア {1, 5} を、逆回りなら n−d = 2 歩で指す。&#10;距離は短い方の 2。d = 2 のときに既に数えた → ここでは見ない" style="text;html=1;align=center;fontSize=11;fontColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="650" y="278" width="320" height="40" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

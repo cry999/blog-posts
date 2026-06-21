@@ -1,0 +1,59 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="between-tails-count" id="between-tails-1">
+    <mxGraphModel dx="980" dy="640" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="800" pageHeight="320" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <mxCell id="title" value="しっぽ↔しっぽ：距離 a+1+b を s = a+b で数える（例: 左 3, 右 2）" style="text;html=1;align=center;fontStyle=1;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="160" y="12" width="540" height="22" as="geometry" />
+        </mxCell>
+
+        <!-- ===== 左: 経路の模式図 a + 1 + b ===== -->
+        <mxCell id="va" value="左 深さ a" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=10;" vertex="1" parent="1"><mxGeometry x="30" y="120" width="60" height="40" as="geometry" /></mxCell>
+        <mxCell id="vX" value="X" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;" vertex="1" parent="1"><mxGeometry x="150" y="123" width="34" height="34" as="geometry" /></mxCell>
+        <mxCell id="vY" value="Y" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;" vertex="1" parent="1"><mxGeometry x="250" y="123" width="34" height="34" as="geometry" /></mxCell>
+        <mxCell id="vb" value="右 深さ b" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=10;" vertex="1" parent="1"><mxGeometry x="340" y="120" width="60" height="40" as="geometry" /></mxCell>
+
+        <mxCell id="ea" value="a 歩" style="endArrow=none;html=1;strokeColor=#6c8ebf;dashed=1;fontSize=10;" edge="1" parent="1" source="va" target="vX"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="exy" value="" style="endArrow=none;html=1;strokeColor=#b85450;strokeWidth=2;" edge="1" parent="1" source="vX" target="vY"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="exylbl" value="+1（ショートカット）" style="text;html=1;align=center;fontSize=10;fontColor=#b85450;fontStyle=1;" vertex="1" parent="1"><mxGeometry x="137" y="88" width="160" height="16" as="geometry" /></mxCell>
+        <mxCell id="eb" value="b 歩" style="endArrow=none;html=1;strokeColor=#6c8ebf;dashed=1;fontSize=10;" edge="1" parent="1" source="vY" target="vb"><mxGeometry relative="1" as="geometry" /></mxCell>
+
+        <mxCell id="distlbl" value="距離 = a + 1 + b。&#10;s = a + b とおくと 距離 = s + 1" style="text;html=1;align=center;fontSize=11;fontColor=#333333;" vertex="1" parent="1">
+          <mxGeometry x="40" y="190" width="350" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- ===== 右: 格子点 (a,b)。a+b=s の点の数を数える ===== -->
+        <!-- 軸 -->
+        <mxCell id="axisX" style="endArrow=classic;html=1;strokeColor=#333333;" edge="1" parent="1"><mxGeometry relative="1" as="geometry"><mxPoint x="545" y="210" as="sourcePoint" /><mxPoint x="700" y="210" as="targetPoint" /></mxGeometry></mxCell>
+        <mxCell id="axisY" style="endArrow=classic;html=1;strokeColor=#333333;" edge="1" parent="1"><mxGeometry relative="1" as="geometry"><mxPoint x="545" y="210" as="sourcePoint" /><mxPoint x="545" y="120" as="targetPoint" /></mxGeometry></mxCell>
+        <mxCell id="axXlbl" value="a →" style="text;html=1;align=left;fontSize=10;" vertex="1" parent="1"><mxGeometry x="702" y="202" width="40" height="16" as="geometry" /></mxCell>
+        <mxCell id="axYlbl" value="b ↑" style="text;html=1;align=center;fontSize=10;" vertex="1" parent="1"><mxGeometry x="528" y="104" width="34" height="16" as="geometry" /></mxCell>
+
+        <!-- 反対角線（同じ s）: s=3, s=4 を例示 -->
+        <mxCell id="diag3" style="endArrow=none;html=1;strokeColor=#dddddd;" edge="1" parent="1"><mxGeometry relative="1" as="geometry"><mxPoint x="615" y="195" as="sourcePoint" /><mxPoint x="570" y="155" as="targetPoint" /></mxGeometry></mxCell>
+        <mxCell id="diag4" style="endArrow=none;html=1;strokeColor=#dddddd;" edge="1" parent="1"><mxGeometry relative="1" as="geometry"><mxPoint x="660" y="195" as="sourcePoint" /><mxPoint x="615" y="155" as="targetPoint" /></mxGeometry></mxCell>
+
+        <!-- 格子点 6 個（色 = s） -->
+        <mxCell id="g11" value="" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1"><mxGeometry x="559" y="184" width="22" height="22" as="geometry" /></mxCell>
+        <mxCell id="g21" value="" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1"><mxGeometry x="604" y="184" width="22" height="22" as="geometry" /></mxCell>
+        <mxCell id="g31" value="" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1"><mxGeometry x="649" y="184" width="22" height="22" as="geometry" /></mxCell>
+        <mxCell id="g12" value="" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1"><mxGeometry x="559" y="144" width="22" height="22" as="geometry" /></mxCell>
+        <mxCell id="g22" value="" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1"><mxGeometry x="604" y="144" width="22" height="22" as="geometry" /></mxCell>
+        <mxCell id="g32" value="" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1"><mxGeometry x="649" y="144" width="22" height="22" as="geometry" /></mxCell>
+
+        <!-- 軸の目盛 -->
+        <mxCell id="tx1" value="1" style="text;html=1;align=center;fontSize=9;" vertex="1" parent="1"><mxGeometry x="560" y="211" width="20" height="14" as="geometry" /></mxCell>
+        <mxCell id="tx2" value="2" style="text;html=1;align=center;fontSize=9;" vertex="1" parent="1"><mxGeometry x="605" y="211" width="20" height="14" as="geometry" /></mxCell>
+        <mxCell id="tx3" value="3" style="text;html=1;align=center;fontSize=9;" vertex="1" parent="1"><mxGeometry x="650" y="211" width="20" height="14" as="geometry" /></mxCell>
+        <mxCell id="ty1" value="1" style="text;html=1;align=center;fontSize=9;" vertex="1" parent="1"><mxGeometry x="529" y="188" width="14" height="14" as="geometry" /></mxCell>
+        <mxCell id="ty2" value="2" style="text;html=1;align=center;fontSize=9;" vertex="1" parent="1"><mxGeometry x="529" y="148" width="14" height="14" as="geometry" /></mxCell>
+
+        <mxCell id="rcap" value="a+b = s の格子点の数 = 距離 s+1 のペア数。&#10;例: s=3（青 2 点）→ 距離 4 が 2 個。合計 3×2 = 6 個" style="text;html=1;align=center;fontSize=10;fontColor=#555555;" vertex="1" parent="1">
+          <mxGeometry x="470" y="232" width="320" height="40" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

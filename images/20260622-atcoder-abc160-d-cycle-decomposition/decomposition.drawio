@@ -1,0 +1,76 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="decomposition" id="decomposition-1">
+    <mxGraphModel dx="980" dy="640" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="600" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- ラベル: 左しっぽ / サイクル / 右しっぽ -->
+        <mxCell id="lbl_left" value="左しっぽ (1 .. X-1)" style="text;html=1;align=center;fontStyle=1;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="60" y="60" width="200" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="lbl_cycle" value="サイクル (X .. Y)" style="text;html=1;align=center;fontStyle=1;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="420" y="60" width="220" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="lbl_right" value="右しっぽ (Y+1 .. N)" style="text;html=1;align=center;fontStyle=1;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="820" y="60" width="220" height="24" as="geometry" />
+        </mxCell>
+
+        <!-- 左しっぽ -->
+        <mxCell id="v1" value="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="80" y="200" width="50" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="vdotsL" value="…" style="text;html=1;align=center;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="150" y="210" width="40" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="vXm1" value="X-1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="210" y="200" width="50" height="50" as="geometry" />
+        </mxCell>
+
+        <!-- サイクル: X .. Y を上辺の直線、X-Y をショートカットで弧 -->
+        <mxCell id="vX" value="X" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="340" y="200" width="50" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="vdotsC" value="…" style="text;html=1;align=center;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="470" y="210" width="40" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="vY" value="Y" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="560" y="200" width="50" height="50" as="geometry" />
+        </mxCell>
+
+        <!-- 右しっぽ -->
+        <mxCell id="vYp1" value="Y+1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="700" y="200" width="50" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="vdotsR" value="…" style="text;html=1;align=center;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="770" y="210" width="40" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="vN" value="N" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="830" y="200" width="50" height="50" as="geometry" />
+        </mxCell>
+
+        <!-- 直線パスの辺 -->
+        <mxCell id="e1" style="endArrow=none;html=1;" edge="1" parent="1" source="v1" target="vdotsL"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e2" style="endArrow=none;html=1;" edge="1" parent="1" source="vdotsL" target="vXm1"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e3" style="endArrow=none;html=1;" edge="1" parent="1" source="vXm1" target="vX"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e4" style="endArrow=none;html=1;" edge="1" parent="1" source="vX" target="vdotsC"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e5" style="endArrow=none;html=1;" edge="1" parent="1" source="vdotsC" target="vY"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e6" style="endArrow=none;html=1;" edge="1" parent="1" source="vY" target="vYp1"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e7" style="endArrow=none;html=1;" edge="1" parent="1" source="vYp1" target="vdotsR"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e8" style="endArrow=none;html=1;" edge="1" parent="1" source="vdotsR" target="vN"><mxGeometry relative="1" as="geometry" /></mxCell>
+
+        <!-- ショートカット辺 X-Y（弧）: これがサイクルを作る -->
+        <mxCell id="eshort" value="ショートカット辺 X–Y" style="endArrow=none;html=1;strokeColor=#b85450;strokeWidth=2;curved=1;exitX=0.5;exitY=0;entryX=0.5;entryY=0;fontColor=#b85450;fontStyle=1;" edge="1" parent="1" source="vX" target="vY">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points"><mxPoint x="475" y="120" /></Array>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- 補足ラベル -->
+        <mxCell id="note" value="この弧があるので X..Y が閉路（サイクル）になる" style="text;html=1;align=center;fontSize=11;fontColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="360" y="300" width="280" height="20" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
