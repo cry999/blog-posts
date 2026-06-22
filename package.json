@@ -20,6 +20,6 @@
   "homepage": "https://github.com/cry999/blog-posts#readme",
   "description": "",
   "dependencies": {
-    "zenn-cli": "^0.4.8"
+    "zenn-cli": "^0.5.1"
   }
 }
