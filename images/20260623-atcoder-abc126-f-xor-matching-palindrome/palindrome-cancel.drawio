@@ -1,0 +1,82 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="palindrome-cancel" id="palindrome-cancel-1">
+    <mxGraphModel dx="900" dy="600" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="720" pageHeight="420" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <mxCell id="title" value="例：M = 2, K = 1  →  数列 [ 3, 2, 1, 2, 3, 0, 1, 0 ]" style="text;html=1;align=center;verticalAlign=middle;fontSize=15;fontStyle=1;fontColor=#333333;" vertex="1" parent="1">
+          <mxGeometry x="60" y="28" width="600" height="28" as="geometry" />
+        </mxCell>
+
+        <mxCell id="band-pal" value="" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#f0f7f0;strokeColor=#b5d6b5;dashed=1;dashPattern=6 4;verticalAlign=top;fontSize=11;fontColor=#5a8a5a;" vertex="1" parent="1">
+          <mxGeometry x="74" y="150" width="358" height="118" as="geometry" />
+        </mxCell>
+        <mxCell id="band-pal-lbl" value="回文（中心 K=1 が対称軸）" style="text;html=1;align=center;fontSize=11;fontColor=#5a8a5a;" vertex="1" parent="1">
+          <mxGeometry x="74" y="154" width="358" height="18" as="geometry" />
+        </mxCell>
+
+        <mxCell id="band-tail" value="" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;fillColor=#f7f7f7;strokeColor=#cccccc;dashed=1;dashPattern=6 4;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="440" y="150" width="216" height="118" as="geometry" />
+        </mxCell>
+        <mxCell id="band-tail-lbl" value="末尾 0, K, 0（補正）" style="text;html=1;align=center;fontSize=11;fontColor=#888888;" vertex="1" parent="1">
+          <mxGeometry x="440" y="154" width="216" height="18" as="geometry" />
+        </mxCell>
+
+        <mxCell id="axis" value="" style="endArrow=none;dashed=1;dashPattern=4 4;strokeColor=#d79b00;strokeWidth=1.5;html=1;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="262" y="186" as="sourcePoint" />
+            <mxPoint x="262" y="280" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="b0" value="3" style="rounded=1;arcSize=18;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=18;fontStyle=1;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="90" y="206" width="56" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="b1" value="2" style="rounded=1;arcSize=18;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=18;fontStyle=1;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="158" y="206" width="56" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="b2" value="1&lt;br&gt;&lt;font style=&quot;font-size:10px;&quot;&gt;K&lt;/font&gt;" style="rounded=1;arcSize=18;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=18;fontStyle=1;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="226" y="206" width="56" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="b3" value="2" style="rounded=1;arcSize=18;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=18;fontStyle=1;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="294" y="206" width="56" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="b4" value="3" style="rounded=1;arcSize=18;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=18;fontStyle=1;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="362" y="206" width="56" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="b5" value="0" style="rounded=1;arcSize=18;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#999999;fontSize=18;fontStyle=1;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="456" y="206" width="56" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="b6" value="1&lt;br&gt;&lt;font style=&quot;font-size:10px;&quot;&gt;K&lt;/font&gt;" style="rounded=1;arcSize=18;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=18;fontStyle=1;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="524" y="206" width="56" height="56" as="geometry" />
+        </mxCell>
+        <mxCell id="b7" value="0" style="rounded=1;arcSize=18;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#999999;fontSize=18;fontStyle=1;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="592" y="206" width="56" height="56" as="geometry" />
+        </mxCell>
+
+        <mxCell id="arc" value="値 3 のペア：この間の XOR ＝ K" style="endArrow=none;curved=1;html=1;strokeColor=#82b366;strokeWidth=2;fontColor=#4a7a4a;fontSize=12;fontStyle=1;" edge="1" parent="1" source="b0" target="b4">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="254" y="124" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="bracket" value="間：2 ⊕ 1 ⊕ 2" style="endArrow=none;html=1;strokeColor=#6c8ebf;strokeWidth=2;fontColor=#3a5a8a;fontSize=12;fontStyle=1;rounded=1;" edge="1" parent="1" source="b1" target="b3">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="186" y="292" />
+              <mxPoint x="322" y="292" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="explain" value="両端の 2 が打ち消し合い（2 ⊕ 2 = 0）、中心の K = 1 だけが残る  →  間の XOR ＝ 1 ＝ K" style="rounded=1;arcSize=12;whiteSpace=wrap;html=1;fillColor=#fff7e6;strokeColor=#d79b00;fontSize=12;fontColor=#7a5a10;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="120" y="332" width="480" height="46" as="geometry" />
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
