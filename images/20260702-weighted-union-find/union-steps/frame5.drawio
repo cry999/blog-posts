@@ -1,0 +1,46 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="frame5" id="f5">
+    <mxGraphModel dx="900" dy="520" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="900" pageHeight="520" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="bg" value="" style="rounded=0;html=1;fillColor=none;strokeColor=#cccccc;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="860" height="470" as="geometry" />
+        </mxCell>
+        <mxCell id="title" value="併合 merge(A, B, w=5) をステップで追う" style="text;html=1;align=left;verticalAlign=middle;fontStyle=1;fontSize=15;" vertex="1" parent="1">
+          <mxGeometry x="40" y="32" width="470" height="28" as="geometry" />
+        </mxCell>
+        <mxCell id="counter" value="STEP 5 / 5" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;fontSize=22;" vertex="1" parent="1">
+          <mxGeometry x="620" y="28" width="220" height="42" as="geometry" />
+        </mxCell>
+        <mxCell id="desc" value="関係が保たれているか検証" style="text;html=1;align=right;verticalAlign=middle;fontSize=13;fontColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="440" y="74" width="400" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="R1" value="R1&#10;pot=0" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;" vertex="1" parent="1">
+          <mxGeometry x="200" y="100" width="80" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="A" value="A&#10;pot=+3" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="110" y="240" width="80" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="R2" value="R2&#10;pot=+7" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffe6cc;" vertex="1" parent="1">
+          <mxGeometry x="380" y="240" width="80" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="B" value="B&#10;pot=+8" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="380" y="380" width="80" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="eA" value="delta[A]=+3" style="html=1;endArrow=classic;" edge="1" parent="1" source="A" target="R1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eB" value="delta[B]=+1" style="html=1;endArrow=classic;" edge="1" parent="1" source="B" target="R2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eNew" value="delta[R2]=7" style="html=1;endArrow=classic;strokeColor=#b85450;strokeWidth=2;fontColor=#b85450;" edge="1" parent="1" source="R2" target="R1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="status" value="diff(A, B) = 8 − 3 = 5 ✓" style="text;html=1;align=center;verticalAlign=middle;fillColor=#fff2cc;rounded=1;fontSize=15;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="120" y="440" width="380" height="42" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

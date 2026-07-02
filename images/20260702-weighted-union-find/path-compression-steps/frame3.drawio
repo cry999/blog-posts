@@ -1,0 +1,40 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="frame3" id="pc-f3">
+    <mxGraphModel dx="900" dy="520" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="900" pageHeight="520" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="bg" value="" style="rounded=0;html=1;fillColor=none;strokeColor=#cccccc;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="860" height="470" as="geometry" />
+        </mxCell>
+        <mxCell id="title" value="経路圧縮 find(X) をステップで追う" style="text;html=1;align=left;verticalAlign=middle;fontStyle=1;fontSize=15;" vertex="1" parent="1">
+          <mxGeometry x="40" y="32" width="470" height="28" as="geometry" />
+        </mxCell>
+        <mxCell id="counter" value="STEP 3 / 5" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;fontSize=22;" vertex="1" parent="1">
+          <mxGeometry x="620" y="28" width="220" height="42" as="geometry" />
+        </mxCell>
+        <mxCell id="desc" value="X を根 R に直結する" style="text;html=1;align=right;verticalAlign=middle;fontSize=13;fontColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="440" y="74" width="400" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="R" value="R&#10;pot=0" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;" vertex="1" parent="1">
+          <mxGeometry x="200" y="90" width="80" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="P" value="P&#10;pot=+3" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="200" y="240" width="80" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="X" value="X&#10;pot=+7" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffe6cc;" vertex="1" parent="1">
+          <mxGeometry x="440" y="380" width="80" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="eP" value="delta[P]=+3" style="html=1;endArrow=classic;" edge="1" parent="1" source="P" target="R">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="eX" value="delta[X] = ?" style="html=1;endArrow=classic;dashed=1;strokeColor=#b85450;strokeWidth=2;fontColor=#b85450;" edge="1" parent="1" source="X" target="R">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="status" value="X の親を R に付け替え&#10;（差分はこれから決める）" style="text;html=1;align=center;verticalAlign=middle;fillColor=#fff2cc;rounded=1;fontSize=15;" vertex="1" parent="1">
+          <mxGeometry x="520" y="215" width="320" height="52" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
