@@ -1,0 +1,42 @@
+# pre-commit（https://pre-commit.com）による、Zenn 記事のコミット前チェック。
+# finalize-article のチェックリストのうち機械化できる項目を、commit 時に自動で走らせる。
+#
+# 導入（初回のみ）:
+#   pip install pre-commit   # または brew install pre-commit
+#   pre-commit install       # .git/hooks/pre-commit を設置
+# 手動で全記事に対して実行:
+#   pre-commit run --all-files
+#
+# 各フックは Node 製ツール（package.json の devDependencies）を呼ぶだけの
+# local フック。変更された articles/ 配下の .md だけがフックに渡る。
+minimum_pre_commit_version: "3.0.0"
+repos:
+  - repo: local
+    hooks:
+      - id: markdownlint
+        name: markdownlint (Markdown 構造)
+        entry: npx markdownlint-cli2
+        language: system
+        files: ^articles/.*\.md$
+        description: コードブロックの言語指定・見出し/表の空行・画像 alt などの構造チェック
+
+      - id: textlint
+        name: textlint (日本語校正)
+        entry: npx textlint
+        language: system
+        files: ^articles/.*\.md$
+        description: 文体統一・一文の長さ・助詞の連続・表記ゆれ（prh）のチェック
+
+      - id: check-frontmatter
+        name: frontmatter 検証
+        entry: node scripts/check-frontmatter.mjs
+        language: system
+        files: ^articles/.*\.md$
+        description: title/emoji/type/topics/published/published_at と slug 規約の検証
+
+      - id: check-math
+        name: KaTeX/数式チェック
+        entry: node scripts/check-math.mjs
+        language: system
+        files: ^articles/.*\.md$
+        description: \text{} 内の生アンダースコアとブロック数式 $$ の前後空行

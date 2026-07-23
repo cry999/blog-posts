@@ -1,0 +1,22 @@
+{
+  "rules": {
+    "preset-ja-technical-writing": {
+      "sentence-length": false,
+      "no-mix-dearu-desumasu": {
+        "preferInHeader": "である",
+        "preferInBody": "である",
+        "preferInList": "である"
+      },
+      "no-exclamation-question-mark": false,
+      "ja-no-mixed-period": false,
+      "max-comma": false,
+      "max-kanji-continuous-len": false,
+      "arabic-kanji-numbers": false,
+      "ja-no-weak-phrase": false
+    },
+    "preset-ja-spacing": false,
+    "prh": {
+      "rulePaths": ["prh.yml"]
+    }
+  }
+}

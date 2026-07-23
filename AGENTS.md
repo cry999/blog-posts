@@ -1,6 +1,6 @@
-# CLAUDE.md
+# AGENTS.md
 
-This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+This file provides guidance to Codex (Codex.ai/code) when working with code in this repository.
 
 ## 概要
 
@@ -38,8 +38,6 @@ published_at: "2026-05-17 03:04"  # 公開日時
 ```
 
 これまでの記事は AtCoder の問題解説（競技プログラミング）が中心で、日本語で書かれている。
-
-**title は 70 文字以内**にする（Zenn のタイトル文字数上限）。超える場合は問題名や説明を短縮して 70 文字以内に収める。仕上げ（`finalize-article`）・公開（`publish-article`）の前に文字数を確認する。
 
 ## 叩き台と完成品の書き分け
 

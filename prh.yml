@@ -1,0 +1,21 @@
+version: 1
+# 表記ゆれチェック辞書（textlint-rule-prh が参照）。
+# finalize-article 工程4「表記ゆれ」の自動化。
+#
+# 方針: 誤検知を避けるため「明らかに一方が正しい」ものだけを登録する。
+#   - コードブロック / インラインコード（`...`）は prh の対象外なので、
+#     コマンド名やコード中の表記は気にしなくてよい。
+#   - 素の URL（例 https://atcoder.jp/...）は地の文として扱われるため、
+#     URL に含まれる小文字表記（atcoder など）は patterns に入れない。
+# 記事を書くうちに気づいた表記ゆれをここへ追記していく運用。
+rules:
+  # 固有名詞の大文字小文字。小文字 "atcoder" は URL に出るため対象にしない。
+  - expected: AtCoder
+    patterns:
+      - Atcoder
+      - ATCODER
+
+  - expected: Union-Find
+    patterns:
+      - UnionFind
+      - Union Find
